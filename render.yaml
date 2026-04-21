@@ -7,3 +7,11 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
+      - key: GDRIVE_MAIN_DF
+        value: 1FUjvqoc7xllpzYPNIqZnXb3N1ngKn9ZW
+      - key: GDRIVE_HADITHS
+        value: 1rqzyb7GBhqrv2cOWAC4TOJAyDRUdZAQ5
+      - key: GDRIVE_EMBEDDINGS
+        value: 1R_fUJsXd1DBC0qSVngaOjQ0QbL1fXiE-
+      - key: GDRIVE_ASMA
+        value: 1V-4AVZxdhX5SrNXuRkj0z6b_dJxg1m23
