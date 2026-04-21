@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiyah AI - Divine Guided Wisdom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-particles">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+    </div>
+    <div class="container">
+        <header>
+            <a href="#" class="logo-link">
+                <div class="brand">
+                    <i class="fa-solid fa-kaaba"></i>
+                    <span>Hadiyah AI</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="{{ url_for('chat') }}" class="btn-secondary"
+                    style="padding: 0.5rem 1.5rem; background: rgba(255,255,255,0.1);">Chat</a>
+            </nav>
+        </header>
+        <main class="hero-section">
+            <h1 class="hero-title">Divine Wisdom<br>Reimagined</h1>
+            <p class="hero-subtitle">
+                A next-generation Quranic semantic search engine powered by AI.
+                Ask about life, faith, and guidance, and receive answers directly from the Holy Quran, Tafseer, and
+                Hadith.
+            </p>
+            <div class="cta-group">
+                <a href="{{ url_for('chat') }}" class="btn btn-primary">
+                    Start Searching <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+            <div class="features-grid" id="features">
+                <div class="feature-card">
+                    <i class="fa-solid fa-brain feature-icon"></i>
+                    <h3>Semantic Understanding</h3>
+                    <p>Go beyond keywords. Our AI understands the intent of your question—searching by meaning (e.g.,
+                        "fasting" finds "Roza").</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-book-open feature-icon"></i>
+                    <h3>Tafseer & Context</h3>
+                    <p>Gain deeper understanding with integrated Tafseer al-Jalalayn for every verse result.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-scroll feature-icon"></i>
+                    <h3>Authentic Hadith</h3>
+                    <p>Contextually relevant Hadiths are retrieved to provide a comprehensive Islamic perspective.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

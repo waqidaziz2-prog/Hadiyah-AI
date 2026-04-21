@@ -1,0 +1,4 @@
+cd "C:\Users\Ahsan Computer\Desktop\FYP\Quranic Chat_bot"
+
+python app.py
+

@@ -1,0 +1,24 @@
+# Large data files - upload these to Google Drive instead
+data/kaggle_hadiths_clean.csv
+data/quran_embeddings.npy
+data/main_df.csv
+data/Tafsir_al-Jalalayn_tafseer.csv
+data/Asma_ul_Husna.csv
+data/surah_info.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

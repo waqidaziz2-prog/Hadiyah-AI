@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiyah AI - Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-particles">
+        <div class="particle p1" style="top: -20%; left: 20%;"></div>
+        <div class="particle p2" style="bottom: 10%; right: 10%; width: 200px; height: 200px;"></div>
+    </div>
+    <div class="container chat-wrapper">
+        <header>
+            <a href="{{ url_for('index') }}" class="brand">
+                <i class="fa-solid fa-kaaba"></i>
+                <span>Hadiyah AI</span>
+            </a>
+            <nav class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a>
+            </nav>
+        </header>
+        <main>
+            <div class="search-area">
+                <div class="search-box-glass">
+                    <input type="text" id="search-input"
+                        placeholder="Ask a question (e.g., 'What is Zakat?', 'Patience in hardship')..."
+                        autocomplete="off">
+                    <button id="search-btn" class="search-btn-glass">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="loading" class="hidden">
+                <div class="loading-orbit"></div>
+                <p class="loading-text">Consulting knowledge...</p>
+            </div>
+            <div id="results-container">
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
