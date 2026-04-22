@@ -275,7 +275,30 @@ def search():
     data = request.get_json()
     if not data or 'query' not in data:
         return jsonify({'error': 'No query provided'}), 400
-    results, asma_result = semantic_search_logic(data['query'], data.get('top_k', 5))
+    
+    query = data['query']
+    use_urdu = data.get('use_urdu', False)
+    
+    results, asma_result = semantic_search_logic(query, data.get('top_k', 5))
+    
+    # If Urdu is requested, translate results
+    if use_urdu:
+        translator = GoogleTranslator(source='en', target='ur')
+        for res in results:
+            try:
+                # Translate English text to Urdu
+                res['urdu_text'] = translator.translate(res['english_text'])
+            except Exception as e:
+                print(f"Urdu translation error: {e}")
+                res['urdu_text'] = ""
+        
+        if asma_result:
+            try:
+                asma_result['urdu_meaning'] = translator.translate(asma_result['meaning'])
+                asma_result['urdu_summary'] = translator.translate(asma_result['summary'])
+            except Exception as e:
+                print(f"Asma Urdu translation error: {e}")
+
     return jsonify({'results': results, 'asma_result': asma_result})
 
 @app.route('/health')
